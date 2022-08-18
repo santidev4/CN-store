@@ -13,7 +13,7 @@ const REACT_APP_API = process.env.REACT_APP_API || 'http://localhost:3001'
 
 export const productsAPI = createApi({
     reducerPath: 'productsAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+    baseQuery: fetchBaseQuery({ baseUrl: REACT_APP_API }),
     endpoints: builder => ({
         getProductsData: builder.query<product[], void>({
             query: () => '/products'
