@@ -9,6 +9,8 @@ type product = {
     id: string
 }
 
+const REACT_APP_API = process.env.REACT_APP_API || 'http://localhost:3001'
+
 export const productsAPI = createApi({
     reducerPath: 'productsAPI',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
