@@ -5,6 +5,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { Provider } from 'react-redux'
 import { store } from '../src/redux/store'
 import NavBar from './components/NavBar'
+import dotenv from 'dotenv'
+dotenv.config()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Provider store={store}>
