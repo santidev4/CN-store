@@ -9,11 +9,11 @@ type product = {
     id: string
 }
 
-const REACT_APP_API = process.env.REACT_APP_API || 'http://localhost:3001'
+const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001'
 
 export const productsAPI = createApi({
     reducerPath: 'productsAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: REACT_APP_API }),
+    baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
     endpoints: builder => ({
         getProductsData: builder.query<product[], void>({
             query: () => '/products'
