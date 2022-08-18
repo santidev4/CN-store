@@ -21,8 +21,8 @@ import { useAppSelector } from '../redux/hooks'
 
 function Cart() {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef() as React.LegacyRef<HTMLButtonElement> | undefined
-
+  const btnRef = useRef() as any
+  
   const products = useAppSelector(state => state.storeSlice.Sell)
   const totalPrice = products.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0)
   const cellNumber = 5492974111199
