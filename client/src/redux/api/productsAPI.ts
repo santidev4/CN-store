@@ -9,7 +9,8 @@ type product = {
     id: string
 }
 
-const baseUrl = process.env.VITE_REACT_APP_API || 'http://localhost:3001'
+const baseUrl = process.env.VITE_REACT_APP_API 
+// || 'http://localhost:3001'
 
 
 
