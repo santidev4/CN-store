@@ -9,7 +9,7 @@ type product = {
     id: string
 }
 
-const baseUrl = import.meta.env.BASE_URL
+const baseUrl = import.meta.env.HEROKU_API
 // || 'http://localhost:3001'
 
 
