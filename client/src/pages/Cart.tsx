@@ -19,13 +19,15 @@ import { useAppSelector } from '../redux/hooks'
 // TODO renderizado condicional con el estado global con titulo, cantidad, botones de + y -, y delete
 // TODO agregar opcion del envio. Si es con envio tiene que haber un input para la direccion
 
+
+
 function Cart() {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef() as any
   
   const products = useAppSelector(state => state.storeSlice.Sell)
-  const totalPrice = products.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0)
+  const totalPrice = products.reduce((prev: number, curr) => prev + (curr.price * curr.quantity), 0)
   const cellNumber = 5492974111199
   const whatsappURL = 'https://wa.me'
   const textReduce = products.reduce((text, el) => {
