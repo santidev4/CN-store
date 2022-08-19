@@ -21,8 +21,6 @@ import { useAppSelector } from '../redux/hooks'
 
 function Cart() {
 
-  console.log('import.meta.env.VITE_REACT_APP_API', import.meta.env.VITE_REACT_APP_API)
-
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef() as any
   
