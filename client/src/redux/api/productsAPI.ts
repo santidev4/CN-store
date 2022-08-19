@@ -9,7 +9,7 @@ type product = {
     id: string
 }
 
-const baseUrl = import.meta.env.VITE_REACT_APP_API 
+const baseUrl = import.meta.env.BASE_URL
 // || 'http://localhost:3001'
 
 
