@@ -9,14 +9,10 @@ type product = {
     id: string
 }
 
-const baseUrl = import.meta.env.VITE_HEROKU_API 
-// || 'http://localhost:3001'
-
-
 
 export const productsAPI = createApi({
     reducerPath: 'productsAPI',
-    baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://cryptic-wildwood-31727.herokuapp.com' }),
     endpoints: builder => ({
         getProductsData: builder.query<product[], void>({
             query: () => '/products'

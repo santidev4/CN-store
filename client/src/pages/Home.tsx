@@ -3,7 +3,6 @@ import Card from "../components/Card"
 import { productsAPI, useGetProductsDataQuery } from '../redux/api/productsAPI'
 
 
-
 function Home() {
 
   const { data, isLoading } = useGetProductsDataQuery()
@@ -15,6 +14,7 @@ function Home() {
       gap={6}
       m='8'
     >
+
       {data && data.map(p => (
         
           <GridItem w='100%' key={p.id}>
